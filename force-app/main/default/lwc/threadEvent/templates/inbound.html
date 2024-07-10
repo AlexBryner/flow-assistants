@@ -1,0 +1,22 @@
+<template>
+    <li class="slds-chat-listitem slds-chat-listitem_inbound">
+        <div class="slds-chat-message">
+            <template if:true={displayMeta}>
+                <span aria-hidden="true" class="slds-avatar slds-avatar_circle slds-chat-avatar">
+                    <lightning-icon icon-name="standard:bot" alternative-text={actor.alias} title={actor.alias}></lightning-icon>
+                </span>
+            </template>
+            <div class={messageBodyClass}>
+                <div class="slds-chat-message__text slds-chat-message__text_inbound">
+                    <lightning-formatted-rich-text value={body}></lightning-formatted-rich-text>
+                </div>
+                <template if:true={displayMeta}>
+                    <div class="slds-chat-message__meta">
+                        {actor.alias} • <lightning-formatted-date-time value={eventTime} hour="numeric"
+                            minute="2-digit"></lightning-formatted-date-time>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </li>
+</template>

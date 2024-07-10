@@ -1,0 +1,24 @@
+{
+  "name": "out_of_scope",
+  "description": "call if the user seems to be interested in doing something outside of a request to the Salesforce Business Analyst",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "intent": {
+        "type": "string",
+        "description": "human readable description of what the user intended from this request that will be read back to them"
+      },
+      "request_contains_code": {
+        "type": "boolean",
+        "description": "Submit True if the request contained any code"
+      },
+      "confidence_rating": {
+        "type": "number",
+        "description": "Capture your confidence rating (percentage) that the request is out of scope"
+      }
+    },
+    "required": [
+      "intent"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.lwc-chat-input lightning-input {
+    padding-right: 0.5rem; /* Adjust spacing between input and button */
+}
+
+.slds-chat-container {
+    overflow: auto;
+    max-height: 50vh;
+    scroll-behavior: smooth;
+}

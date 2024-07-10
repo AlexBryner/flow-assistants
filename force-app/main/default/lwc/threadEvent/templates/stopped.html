@@ -1,0 +1,13 @@
+<template>
+  <li class="slds-chat-listitem slds-chat-listitem_bookend">
+    <div class="slds-chat-bookend slds-chat-bookend_stop">
+      <span class="slds-icon_container slds-icon-utility-end_chat slds-chat-icon">
+        <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#end_chat"></use>
+        </svg>
+      </span>
+      <p>Thread ended by <b>{actor.Name}</b> • <lightning-formatted-date-time value={messageTime} year="2-digit" month="short" day="2-digit" hour="numeric" weekday="long" minute="2-digit"></lightning-formatted-date-time>
+      </p>
+    </div>
+  </li>
+</template>

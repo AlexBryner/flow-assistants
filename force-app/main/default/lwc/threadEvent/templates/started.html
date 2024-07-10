@@ -1,0 +1,14 @@
+<template>
+    <li class="slds-chat-listitem slds-chat-listitem_bookend">
+        <div class="slds-chat-bookend">
+            <span class="slds-icon_container slds-icon-utility-chat slds-chat-icon">
+                <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chat"></use>
+                </svg>
+            </span>
+            <p>Thread started by <b>{actor.Name}</b> • <lightning-formatted-date-time value={eventTime} year="2-digit"
+                    month="short" day="2-digit" hour="numeric" weekday="long"
+                    minute="2-digit"></lightning-formatted-date-time></p>
+        </div>
+    </li>
+</template>

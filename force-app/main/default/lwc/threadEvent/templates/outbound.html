@@ -1,0 +1,16 @@
+<template>
+    <li class="slds-chat-listitem slds-chat-listitem_outbound">
+        <div class="slds-chat-message">
+            <div class="slds-chat-message__body">
+                <div class="slds-chat-message__text slds-chat-message__text_outbound-agent">
+                    <span>{body}</span>
+                </div>
+                <template if:true={displayMeta}>
+                    <div class="slds-chat-message__meta">
+                        {actor.alias} • <lightning-formatted-date-time value={eventTime} hour="numeric" minute="2-digit"></lightning-formatted-date-time>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </li>
+</template>

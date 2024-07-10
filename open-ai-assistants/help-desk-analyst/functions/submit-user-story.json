@@ -1,0 +1,44 @@
+{
+  "name": "submit_user_story",
+  "description": "calling this function presents the user story to the end user to confirm the submission, if correct it will submit the user story as a new request to the salesforce team",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "subject": {
+        "type": "string"
+      },
+      "user_story_summary": {
+        "type": "string"
+      },
+      "acceptance_criteria": {
+        "type": "string"
+      },
+      "why": {
+        "type": "string"
+      },
+      "who": {
+        "type": "string"
+      },
+      "what": {
+        "type": "string"
+      },
+      "how": {
+        "type": "string"
+      },
+      "impact": {
+        "type": "string"
+      },
+      "requester_sentiment": {
+        "type": "string"
+      },
+      "requester_refused_details": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "subject",
+      "user_story_summary",
+      "acceptance_criteria"
+    ]
+  }
+}
