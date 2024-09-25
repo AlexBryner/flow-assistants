@@ -1,8 +1,5 @@
 public with sharing class OpenAi {
 
-    static final String BASE_URL = 'https://api.openai.com';
-    static final String AUTH_TOKEN = OpenAI_Settings__c.getOrgDefaults().ApiKey__c;
-
     public OpenAiModel[] getModels() {
         return OpenAiModel.parse(
                 getRequest('/v1/models')
@@ -78,14 +75,13 @@ public with sharing class OpenAi {
     static HttpRequest newRequest(String method, String urlPath) {
         HttpRequest req = new HttpRequest();
         req.setMethod(method);
-        req.setEndpoint(BASE_URL + urlPath);
+        req.setEndpoint('callout:OpenAI' + urlPath);
         return req;
     }
 
     static HttpResponse sendRequest(HttpRequest req) {
-        req.setHeader('Authorization', 'Bearer ' + AUTH_TOKEN);
         req.setHeader('OpenAI-Beta', 'assistants=v1');
-        req.setTimeout(30000);
+        req.setTimeout(120000);
         return new Http().send(req);
     }
 
